@@ -1,0 +1,22 @@
+PODS:
+  - application_icon (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - application_icon (from `.symlinks/plugins/application_icon/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  application_icon:
+    :path: ".symlinks/plugins/application_icon/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  application_icon: 6c882fd954934784443dad48a169cadb5f326cb1
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
+
+COCOAPODS: 1.8.4
