@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7667220-4166-4712-a20e-bc9cd66c0b4f" name="Default Changelist" comment="" />
+    <list default="true" id="c7667220-4166-4712-a20e-bc9cd66c0b4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/.github/workflows/build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/application_icon/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +29,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fBVyEHJqr8KKfYO1vtS94T9TMW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -40,22 +60,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1386" height="230" key="GridCell.Tab.0.bottom" timestamp="1595772103225">
+    <state width="1386" height="303" key="GridCell.Tab.0.bottom" timestamp="1595776900886">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1386" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1595772103225" />
-    <state width="1386" height="230" key="GridCell.Tab.0.center" timestamp="1595772103224">
+    <state width="1386" height="303" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1595776900886" />
+    <state width="1386" height="303" key="GridCell.Tab.0.center" timestamp="1595776900886">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1386" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1595772103224" />
-    <state width="1386" height="230" key="GridCell.Tab.0.left" timestamp="1595772103224">
+    <state width="1386" height="303" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1595776900886" />
+    <state width="1386" height="303" key="GridCell.Tab.0.left" timestamp="1595776900885">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1386" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1595772103224" />
-    <state width="1386" height="230" key="GridCell.Tab.0.right" timestamp="1595772103225">
+    <state width="1386" height="303" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1595776900885" />
+    <state width="1386" height="303" key="GridCell.Tab.0.right" timestamp="1595776900886">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1386" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1595772103225" />
+    <state width="1386" height="303" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1595776900886" />
     <state x="301" y="23" width="838" height="877" key="search.everywhere.popup" timestamp="1595770279563">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
