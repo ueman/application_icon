@@ -16,8 +16,7 @@ class AppIconLoader(private val context: Context) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
             return false
         }
-        val appIcon = context.packageManager.defaultActivityIcon
-        //val appIcon = context.packageManager.getApplicationIcon(context.applicationInfo)
+        val appIcon = loadApplicationDrawable()
         return appIcon is AdaptiveIconDrawable
     }
 
@@ -29,7 +28,7 @@ class AppIconLoader(private val context: Context) {
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun loadAdaptiveIconForeground(): ByteArray? {
-        val d  = context.packageManager.defaultActivityIcon
+        val d = loadApplicationDrawable()
         if (d !is AdaptiveIconDrawable) {
             throw Exception("Icon is not a Adaptive Icon")
         }
@@ -38,7 +37,7 @@ class AppIconLoader(private val context: Context) {
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun loadAdaptiveIconBackground(): ByteArray? {
-        val d = context.packageManager.defaultActivityIcon
+        val d = loadApplicationDrawable()
         if (d !is AdaptiveIconDrawable) {
             throw Exception("Icon is not a Adaptive Icon")
         }
@@ -64,6 +63,12 @@ class AppIconLoader(private val context: Context) {
         drawable.setBounds(0, 0, canvas.width, canvas.height)
         drawable.draw(canvas)
         return bitmap
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun loadApplicationDrawable(): Drawable{
+        val appIconId = context.applicationContext.applicationInfo.icon
+        return context.applicationContext.getDrawable(appIconId)
     }
 }
 
