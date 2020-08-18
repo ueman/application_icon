@@ -1,14 +1,16 @@
 import 'dart:typed_data';
 
-import 'package:application_icon/src/app_icon_channel.dart';
+import 'package:application_icon/src/adaptive_icon.dart';
+import 'package:application_icon/src/app_icon_info.dart';
 import 'package:flutter/material.dart';
 
-class BitmapAppIcon extends StatefulWidget {
+/// Shows the application icon if it is not and [AdaptiveIcon]
+class SimpleAppIconImage extends StatefulWidget {
   @override
-  _BitmapAppIconState createState() => _BitmapAppIconState();
+  _SimpleAppIconImageState createState() => _SimpleAppIconImageState();
 }
 
-class _BitmapAppIconState extends State<BitmapAppIcon> {
+class _SimpleAppIconImageState extends State<SimpleAppIconImage> {
   Uint8List appIcon;
 
   @override
@@ -26,7 +28,7 @@ class _BitmapAppIconState extends State<BitmapAppIcon> {
   }
 
   Future<void> loadAppIcon() async {
-    final newAppIcon = await ApplicationIcon.getAppIcon();
+    final newAppIcon = await AppIconInfo.getAppIcon();
     setState(() {
       appIcon = newAppIcon;
     });

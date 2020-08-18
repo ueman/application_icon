@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           child: SizedBox(
             width: 150,
             height: 150,
-            child: AppIcon(),
+            child: AppIconImage(),
           ),
         ),
       ),

@@ -1,14 +1,17 @@
 import 'package:application_icon/src/adaptive_image.dart';
-import 'package:application_icon/src/app_icon_channel.dart';
-import 'package:application_icon/src/bitmap_app_icon.dart';
+import 'package:application_icon/src/app_icon_info.dart';
+import 'package:application_icon/src/simple_app_icon_image.dart';
+
 import 'package:flutter/material.dart';
 
-class AndroidAppIcon extends StatefulWidget {
+/// Shows the applications adaptive icon if it has one.
+/// Otherwise, the static application icon gets shown.
+class AndroidAppImage extends StatefulWidget {
   @override
-  _AndroidAppIconState createState() => _AndroidAppIconState();
+  _AndroidAppImageState createState() => _AndroidAppImageState();
 }
 
-class _AndroidAppIconState extends State<AndroidAppIcon> {
+class _AndroidAppImageState extends State<AndroidAppImage> {
   bool hasAdaptiveIcon;
 
   @override
@@ -23,13 +26,13 @@ class _AndroidAppIconState extends State<AndroidAppIcon> {
       return Center(child: CircularProgressIndicator());
     }
     if (hasAdaptiveIcon == false) {
-      return BitmapAppIcon();
+      return SimpleAppIconImage();
     }
     return AndroidAdaptiveImage();
   }
 
   Future<void> checkAppIcon() async {
-    final value = await ApplicationIcon.hasAdaptiveIcon();
+    final value = await AppIconInfo.hasAdaptiveIcon();
     setState(() {
       hasAdaptiveIcon = value;
     });

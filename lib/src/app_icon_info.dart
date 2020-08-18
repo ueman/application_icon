@@ -4,17 +4,18 @@ import 'dart:typed_data';
 import 'package:application_icon/src/adaptive_icon.dart';
 import 'package:flutter/services.dart';
 
-class ApplicationIcon {
+class AppIconInfo {
   static const MethodChannel _channel = const MethodChannel('application_icon');
 
   /// Loads the app icon as a simple raw bitmap.
-  /// This should be PNG encoded, but is not guaranteed.
+  /// This should be PNG encoded, but it is not guaranteed to be a PNG.
   static Future<Uint8List> getAppIcon() async {
     final Uint8List hasAdaptiveIcon = await _channel.invokeMethod('bitmapIcon');
     return hasAdaptiveIcon;
   }
 
-  /// Checks wether the application has an AdaptiveIcon as app icon.
+  /// Checks if the application has an [AdaptiveIcon](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
+  /// as app icon.
   /// On platform other than Android this returns false.
   /// On Android SDK levels smaller than API Level 26
   /// (https://developer.android.com/about/versions/oreo/android-8.0)
@@ -29,8 +30,15 @@ class ApplicationIcon {
     }
   }
 
-  /// Loads the app icon as an AdaptiveIcon.
-  /// This should be PNG encoded, but is not guaranteed.
+  /// Loads the app icon as an [AdaptiveIcon](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive).
+  /// This should be PNG encoded, but it is not guaranteed to be a PNG.
+  ///
+  /// If the AdaptiveIcon is a vector it gets rasterized because there is
+  /// currently no way to export Androids Vector Drawables as the original
+  /// XML file. Even then there would be no way to display them as a vector
+  /// image.
+  ///
+  /// Throws an exception on platforms other than Android.
   static Future<AdaptiveIcon> getAdaptiveIcon() async {
     if (!Platform.isAndroid) {
       throw Exception('getAdaptiveIcon is only supported on Android');

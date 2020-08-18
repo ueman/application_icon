@@ -6,10 +6,10 @@
 
 This package provides a widget which shows the application icon of your app.
 
-It uses the most high resolution icon of your icon on iOS.
-On Android on API levels higher or equal than [26 (Android O)](https://developer.android.com/about/versions/oreo/android-8.0)
+It tries to use the highest resolution icon of your app icon on iOS.
+On Android on API levels equal or higher than [26 (Android O)](https://developer.android.com/about/versions/oreo/android-8.0)
 it tries to show the [Adaptive Icon](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
-if available. Otherwise it just shows the normal application icon.
+if available. Otherwise, it just shows the normal application icon.
 
 If an adaptive icon is available it can be long pressed and dragged around.
 It tries to mimick the dragging in the app launcher.
@@ -47,10 +47,13 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           // use AppIcon to show your application icon
-          child: AppIcon(),
+          child: AppIconImage(),
         ),
       ),
     );
   }
 }
 ```
+
+If you are not interested in displaying the app icon you can also load
+the image with the `AppIconInfo` class.

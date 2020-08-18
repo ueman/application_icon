@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   check:
-    # the golden images were generated on MacOS, therefore the tests must run on MacOS
+    # we build iOS, therefor we need a MacOS build host
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2

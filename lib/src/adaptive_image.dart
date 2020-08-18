@@ -1,13 +1,13 @@
 import 'package:application_icon/src/adaptive_icon.dart';
-import 'package:application_icon/src/app_icon_channel.dart';
+import 'package:application_icon/src/app_icon_info.dart';
 import 'package:application_icon/src/tiltable_stack.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AdaptiveImage extends StatelessWidget {
-  final AdaptiveIcon icon;
-
   const AdaptiveImage({Key key, this.icon}) : super(key: key);
+
+  final AdaptiveIcon icon;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _AndroidAdaptiveImageState extends State<AndroidAdaptiveImage> {
   }
 
   Future<void> loadAppIcon() async {
-    final newAppIcon = await ApplicationIcon.getAdaptiveIcon();
+    final newAppIcon = await AppIconInfo.getAdaptiveIcon();
     setState(() {
       appIcon = newAppIcon;
     });
