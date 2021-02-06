@@ -57,3 +57,6 @@ class MyApp extends StatelessWidget {
 
 If you are not interested in displaying the app icon you can also load
 the image with the `AppIconInfo` class.
+
+# Sponsoring
+I'm working on my packages on my free-time, but I don't have as much time as I would. If this package or any other package I created is helping you, please consider to [sponsor](https://github.com/ueman) me. By doing so, I will prioritize your issues or your pull-requests before the others.

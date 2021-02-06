@@ -1,6 +1,6 @@
 name: application_icon
 description: This package provides a widget which shows the application icon of your app.
-version: 1.0.0
+version: 1.0.1
 homepage: https://uekoetter.dev/
 repository: https://github.com/ueman/application_icon
 issue_tracker: https://github.com/ueman/application_icon/issues
