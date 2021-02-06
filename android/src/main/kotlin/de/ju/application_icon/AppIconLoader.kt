@@ -68,7 +68,7 @@ class AppIconLoader(private val context: Context) {
     @RequiresApi(Build.VERSION_CODES.O)
     private fun loadApplicationDrawable(): Drawable{
         val appIconId = context.applicationContext.applicationInfo.icon
-        return context.applicationContext.getDrawable(appIconId)
+        return context.applicationContext.getDrawable(appIconId)!!
     }
 }
 
