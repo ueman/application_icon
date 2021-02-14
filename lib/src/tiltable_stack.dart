@@ -7,17 +7,16 @@ import 'package:flutter/rendering.dart';
 
 class TiltableStack extends StatefulWidget {
   const TiltableStack({
-    Key key,
-    @required this.children,
+    Key? key,
+    required this.children,
     this.fit = StackFit.loose,
     this.onTap,
     this.alignment = Alignment.bottomCenter,
-  })  : assert(children != null, 'children should not be null'),
-        super(key: key);
+  }) : super(key: key);
 
   final List<Widget> children;
   final Alignment alignment;
-  final GestureTapCallback onTap;
+  final GestureTapCallback? onTap;
   final StackFit fit;
 
   @override
@@ -26,12 +25,11 @@ class TiltableStack extends StatefulWidget {
 
 class _TiltableStackState extends State<TiltableStack>
     with TickerProviderStateMixin {
-  AnimationController tilt;
-  AnimationController depth;
+  late AnimationController tilt;
+  late AnimationController depth;
   double pitch = 0;
   double yaw = 0;
-  Offset _offset;
-  SpringSimulation springSimulation;
+  Offset? _offset;
 
   @override
   void initState() {
@@ -90,8 +88,8 @@ class _TiltableStackState extends State<TiltableStack>
     final offset = _globalToLocal(context, drag.globalPosition);
     _offset ??= offset;
 
-    pitch += (offset.dy - _offset.dy) * (1 / size.height);
-    yaw -= (offset.dx - _offset.dx) * (1 / size.width);
+    pitch += (offset.dy - (_offset?.dy ?? 0)) * (1 / size.height);
+    yaw -= (offset.dx - (_offset?.dx ?? 0)) * (1 / size.width);
     _offset = offset;
 
     updateTransformation();
@@ -126,7 +124,7 @@ class _TiltableStackState extends State<TiltableStack>
   }
 
   Offset _globalToLocal(BuildContext context, Offset globalPosition) {
-    final RenderBox box = context.findRenderObject();
+    final RenderBox box = context.findRenderObject() as RenderBox;
     return box.globalToLocal(globalPosition);
   }
 }
@@ -141,9 +139,9 @@ class _TransformationData {
 
 class _TiltedStack extends StatelessWidget {
   const _TiltedStack({
-    Key key,
-    @required this.children,
-    @required this.data,
+    Key? key,
+    required this.children,
+    required this.data,
     this.alignment = Alignment.center,
     this.fit = StackFit.loose,
   }) : super(key: key);
@@ -169,7 +167,7 @@ class _TiltedStack extends StatelessWidget {
                   ..rotateX(data.pitch)
                   ..rotateY(data.yaw)
                   ..translate(-data.yaw * i * 70, data.pitch * i * 70, 0)
-                  ..scale((data.depth ?? 0) * (i + 1) * 0.1 + 1),
+                  ..scale((data.depth) * (i + 1) * 0.1 + 1),
                 child: children[i],
                 alignment: FractionalOffset.center,
               ),

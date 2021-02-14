@@ -11,7 +11,7 @@ class SimpleAppIconImage extends StatefulWidget {
 }
 
 class _SimpleAppIconImageState extends State<SimpleAppIconImage> {
-  Uint8List appIcon;
+  Uint8List? appIcon;
 
   @override
   void initState() {
@@ -23,8 +23,9 @@ class _SimpleAppIconImageState extends State<SimpleAppIconImage> {
   Widget build(BuildContext context) {
     if (appIcon == null) {
       return Center(child: CircularProgressIndicator());
+    } else {
+      return Image.memory(appIcon!);
     }
-    return Image.memory(appIcon);
   }
 
   Future<void> loadAppIcon() async {

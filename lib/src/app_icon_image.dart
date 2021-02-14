@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 /// Shows the application icon.
 class AppIconImage extends StatelessWidget {
-  const AppIconImage({Key key}) : super(key: key);
+  const AppIconImage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

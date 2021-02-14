@@ -12,7 +12,7 @@ class AndroidAppImage extends StatefulWidget {
 }
 
 class _AndroidAppImageState extends State<AndroidAppImage> {
-  bool hasAdaptiveIcon;
+  bool? hasAdaptiveIcon;
 
   @override
   void initState() {

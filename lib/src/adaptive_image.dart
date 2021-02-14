@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AdaptiveImage extends StatelessWidget {
-  const AdaptiveImage({Key key, this.icon}) : super(key: key);
+  const AdaptiveImage({Key? key, required this.icon}) : super(key: key);
 
   final AdaptiveIcon icon;
 
@@ -21,14 +21,14 @@ class AdaptiveImage extends StatelessWidget {
 }
 
 class AndroidAdaptiveImage extends StatefulWidget {
-  const AndroidAdaptiveImage({Key key}) : super(key: key);
+  const AndroidAdaptiveImage({Key? key}) : super(key: key);
 
   @override
   _AndroidAdaptiveImageState createState() => _AndroidAdaptiveImageState();
 }
 
 class _AndroidAdaptiveImageState extends State<AndroidAdaptiveImage> {
-  AdaptiveIcon appIcon;
+  AdaptiveIcon? appIcon;
 
   @override
   void initState() {
@@ -40,8 +40,9 @@ class _AndroidAdaptiveImageState extends State<AndroidAdaptiveImage> {
   Widget build(BuildContext context) {
     if (appIcon == null) {
       return Center(child: CircularProgressIndicator());
+    } else {
+      return AdaptiveImage(icon: appIcon!);
     }
-    return AdaptiveImage(icon: appIcon);
   }
 
   Future<void> loadAppIcon() async {
