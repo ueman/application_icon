@@ -1,18 +1,28 @@
 # Application Icon
 
-[![Pub](https://img.shields.io/pub/v/application_icon.svg)](https://pub.dartlang.org/packages/application_icon)
-[![GitHub Workflow Status](https://github.com/ueman/application_icon/workflows/build/badge.svg?branch=master)](https://github.com/ueman/application_icon/actions?query=workflow%3Abuild)
+[![pub package](https://img.shields.io/pub/v/application_icon.svg)](https://pub.dev/packages/application_icon) [![likes](https://img.shields.io/pub/likes/application_icon)](https://pub.dev/packages/application_icon/score) [![popularity](https://img.shields.io/pub/popularity/application_icon)](https://pub.dev/packages/application_icon/score) [![pub points](https://img.shields.io/pub/points/application_icon)](https://pub.dev/packages/application_icon/score) [![GitHub Workflow Status](https://github.com/ueman/application_icon/workflows/build/badge.svg?branch=master)](https://github.com/ueman/application_icon/actions?query=workflow%3Abuild)
 <!-- [![code coverage](https://codecov.io/gh/ueman/application_icon/branch/master/graph/badge.svg)](https://codecov.io/gh/ueman/application_icon) -->
+
+# Platform support
+
+| Platform | Supported | Remarks |
+|----------|:---------:|---------|
+| Android  | ✅ | |
+| iOS      | ✅ | |
+| macOS    | ❌ | |
+| Linux    | ❌ | |
+| Windows  | ❌ | |
+| Web.     | ❌ | |
 
 This package provides a widget which shows the application icon of your app.
 
 It tries to use the highest resolution icon of your app icon on iOS.
-On Android on API levels equal or higher than [26 (Android O)](https://developer.android.com/about/versions/oreo/android-8.0)
+On Android, on API levels equal or higher than [26 (Android O)](https://developer.android.com/about/versions/oreo/android-8.0)
 it tries to show the [Adaptive Icon](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
 if available. Otherwise, it just shows the normal application icon.
 
-If an adaptive icon is available it can be long pressed and dragged around.
-It tries to mimick the dragging in the app launcher.
+If an adaptive icon is available, it can be long pressed and dragged around.
+It tries to mimic the dragging in the app launcher.
 
 ## Setup
 
@@ -55,12 +65,11 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-If you are not interested in displaying the app icon you can also load
+If you are not interested in displaying the app icon, you can also load
 the image with the `AppIconInfo` class.
 
-## 📣  Author
 
-- Jonas Uekötter [GitHub](https://github.com/ueman) [Twitter](https://twitter.com/ue_man)
+# 📣 About the author
 
-## Sponsoring
-I'm working on my packages on my free-time, but I don't have as much time as I would. If this package or any other package I created is helping you, please consider to [sponsor](https://github.com/ueman) me. By doing so, I will prioritize your issues or your pull-requests before the others.
+- [![Twitter Follow](https://img.shields.io/twitter/follow/ue_man?style=social)](https://twitter.com/ue_man)
+- [![GitHub followers](https://img.shields.io/github/followers/ueman?style=social)](https://github.com/ueman)
