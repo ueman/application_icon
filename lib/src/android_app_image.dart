@@ -33,6 +33,9 @@ class _AndroidAppImageState extends State<AndroidAppImage> {
 
   Future<void> checkAppIcon() async {
     final value = await AppIconInfo.hasAdaptiveIcon();
+    if (!mounted) {
+      return;
+    }
     setState(() {
       hasAdaptiveIcon = value;
     });

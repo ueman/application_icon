@@ -30,6 +30,9 @@ class _SimpleAppIconImageState extends State<SimpleAppIconImage> {
 
   Future<void> loadAppIcon() async {
     final newAppIcon = await AppIconInfo.getAppIcon();
+    if (!mounted) {
+      return;
+    }
     setState(() {
       appIcon = newAppIcon;
     });
