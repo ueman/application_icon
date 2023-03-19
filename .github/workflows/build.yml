@@ -7,8 +7,8 @@ jobs:
     # we build iOS, therefor we need a MacOS build host
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v1
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
         with:
           channel: beta
       - run: flutter format -n --set-exit-if-changed .
@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [macOS-latest, ubuntu-latest, windows-latest]
-        flutter_channel: [beta]
+        flutter_channel: [stable, beta]
         include:
           - os: macOS-latest
             flutter_build: ios --no-codesign
@@ -34,8 +34,8 @@ jobs:
       GRADLE_OPTS: -Dorg.gradle.daemon=false
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v1
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
         with:
           channel: ${{ matrix.flutter_channel }}
       - working-directory: example
