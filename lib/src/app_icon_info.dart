@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:application_icon/src/adaptive_icon.dart';
 import 'package:flutter/services.dart';
